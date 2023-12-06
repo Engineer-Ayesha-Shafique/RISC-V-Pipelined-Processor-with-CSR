@@ -170,7 +170,7 @@ module processor
         .dataIn1(alu_out),
         .dataIn2(data_mem_out),
         .dataIn3(pc_out+4),
-        .dataIn4(32'b0),
+        .dataIn4(CSR_wdata),
         .dataOut(wdata)
     );
 
