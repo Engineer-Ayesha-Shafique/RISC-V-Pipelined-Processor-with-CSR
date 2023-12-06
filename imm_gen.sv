@@ -12,7 +12,7 @@ module imm_gen
     parameter U_Type_LUI    = 7'b0110111; // U-type LUI
     parameter U_Type_AUIPC  = 7'b0010111; // U-type AUIPC
     parameter J_Type        = 7'b0010111; // J-Type
-
+    parameter Z_Type        = 7'b1110011; // CSRRW Instruction
     always_comb
         case(inst[6:0])
             I_Type_Alu:/*I-type addi*/ 
@@ -49,6 +49,8 @@ module imm_gen
             B_TYPE: /*B-type */
                 imm = { {20{inst[31]}}, inst[7], inst[30:25], inst[11:8], {1{1'b0}}};  // BRANCH -> B-Type
 
+			Z_Type: /*Z-type*/ // CSRRW
+                imm = $signed(inst[31:20]);      // CSRRW    -> Z-Type
             default: 
                 imm = { {21{inst[31]}}, inst[30:20]};
         endcase

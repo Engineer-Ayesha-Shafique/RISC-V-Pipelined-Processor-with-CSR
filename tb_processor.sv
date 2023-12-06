@@ -29,7 +29,7 @@ module tb_processor();
         #150;
 
         //Test case : For conditional jumps: 
-        // $display("x2: %h", dut.reg_file_i.reg_mem[2]);
+        //$display("x2: %h", dut.reg_file_i.reg_mem[2]);
 
         //For storing 32bit immediate in register
         // $display("x6: %h", dut.reg_file_i.reg_mem[6]);

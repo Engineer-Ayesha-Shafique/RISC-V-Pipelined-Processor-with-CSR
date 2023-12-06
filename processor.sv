@@ -33,6 +33,12 @@ module processor
     logic br_taken;
     logic jump;
 
+
+    logic CSR_reg_wr, CSR_reg_rd, CSR_reg_wrMW, CSR_reg_rdMW, is_mret, is_mretMW, CSR_epc_taken;
+	logic [1:0]  CSR_interrupt;
+	logic [11:0] CSR_addr;
+	logic [31:0] CSR_wdata, CSR_rdata, CSR_PC, CSR_epc, CSR_prior_PC;
+
     // program counter
     pc pc_i
     (
@@ -103,7 +109,10 @@ module processor
         .wr_en ( wr_en          ),
         .mem_mode(mem_mode),
         .br_type(br_type),
-        .jump(jump)
+        .jump(jump),
+        .CSR_reg_rd(CSR_reg_rd),
+        .CSR_reg_wr(CSR_reg_wr),
+        .is_mret(is_mret)
     );
 
     // alu
@@ -172,6 +181,24 @@ module processor
         .dataIn2(alu_out),
         .dataOut(pc_in)
     );
+    
+
+    CSR_RegisterFile	CSR_register_file(
+        .clk(clk), 
+        .rst(rst), 
+        .addr(CSR_addr[11:0]), 
+        .wdata(CSR_wdata), 
+        .pc(pc_out), 
+        .interrupt(CSR_interrupt), 
+        .csr_wr(CSR_reg_wrMW), 
+        .csr_rd(CSR_reg_rdMW), 
+        .is_mret(is_mretMW), 
+        .inst(inst),       
+        .epc_taken(CSR_epc_taken), 
+        .rdata(CSR_rdata), 
+        .exc_pc(CSR_epc)
+        );
+    
 
 
     
