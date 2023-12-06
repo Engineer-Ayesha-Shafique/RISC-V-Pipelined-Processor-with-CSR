@@ -1,0 +1,58 @@
+# vsim -c tb_processor -do "run -all" 
+# Start time: 22:23:24 on Dec 06,2023
+# Loading sv_std.std
+# Loading work.tb_processor
+# Loading work.processor
+# Loading work.pc
+# Loading work.inst_mem
+# Loading work.imm_gen
+# Loading work.inst_dec
+# Loading work.reg_file
+# Loading work.controller
+# Loading work.alu
+# Loading work.branch_cond
+# Loading work.data_mem
+# Loading work.mux2x1
+# Loading work.mux4x1
+# Loading work.CSR_RegisterFile
+# run -all
+# I-Type
+# 
+# CSRRW
+# 
+# x0: 00000000
+# x1: 00000000
+# x2: 00000000
+# x3: 00000000
+# x4: 00000000
+# x5: 00000000
+# x6: 00000000
+# x7: 00000000
+# x8: 00000000
+# x9: 00000000
+# x10: 00000001
+# x11: 00000000
+# x12: 0000000a
+# x13: 00000000
+# x14: 00000000
+# x15: 00000000
+# x16: 00000000
+# x17: 00000000
+# x18: 00000000
+# x19: 00000000
+# x20: 00000000
+# x21: 00000000
+# x22: 00000000
+# x23: 00000000
+# x24: 00000000
+# x25: 00000000
+# x26: 00000000
+# x27: 00000000
+# x28: 00000000
+# x29: 00000000
+# x30: 00000000
+# x31: 00000000
+# ** Note: $finish    : tb_processor.sv(48)
+#    Time: 160 ps  Iteration: 0  Instance: /tb_processor
+# End time: 22:23:24 on Dec 06,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

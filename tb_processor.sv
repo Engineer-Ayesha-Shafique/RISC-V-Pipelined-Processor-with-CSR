@@ -36,10 +36,15 @@ module tb_processor();
         // $display("x7: %h", dut.reg_file_i.reg_mem[7]);
 
         //For finding a gcd of two numbers
-        $display("GCD of 12 and 9: x9: %h", dut.reg_file_i.reg_mem[8]);
+        // $display("GCD of 12 and 9: x8: %h", dut.reg_file_i.reg_mem[8]);
 
         //load store
         // $display ("x10: %h", dut.reg_file_i.reg_mem[10]);
+
+        for (int i = 0; i < 32; i = i + 1) begin
+            $display("x%0d: %h", i, dut.reg_file_i.reg_mem[i]);
+        end
+
         $finish;
     end
 
