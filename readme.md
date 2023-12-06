@@ -50,7 +50,54 @@ Link v1.10 [13.12.2020]: https://riscv.org/wp-content/uploads/2017/05/riscv-priv
 Describes a standard, that enables debugging.
 Link 0.13.2 [13.12.2020]: https://riscv.org/wp-content/uploads/2019/03/riscv-debug-release.pdf
 
-## Compilation
+
+## How to work
+
+
+Add Risc V assembly code in 
+
+```
+sim/asm_code.s
+```
+
+Remember to update path of bin folder of modelsim in Makefile
+
+```
+conv_to_machine:  #converts assembly code to machine code
+
+#this make does not call this makefile but in that folder
+	cd docs/assembly_to_machine/ && $(MAKE)
+
+compile:
+	/yourpath/modelsim_ase/bin/vlog *.sv
+
+simulate:
+	/yourpath/modelsim_ase/bin/vsim -c  tb_processor -do "run -all"	
+
+run: conv_to_machine compile simulate
+
+```
+
+### For linus Users
+
+RTL can be compiled and simulated with the command: 
+
+```
+sudo make run
+```
+#### Viewing the VCD Waveform File
+
+To view the waveform of the design run the command:
+
+```
+gtkwave dumfile_name.vcd
+```
+
+This opens a waveform window. Pull the required signals in the waveform and verify the behaviour of the design. If it won't work in IDE terminal open linux system terminal and re-run the command. Gtkwave has some issue in IDE say VS code, etc.
+
+### For Windows Users
+
+#### Compilation
 
 RTL can be compiled with the command: 
 
@@ -66,7 +113,7 @@ vlog *.sv
 
 Compilation creates a ``` work ``` folder in your current working directory in which all the files generated after compilation are stored.
  
-## Simulation
+#### Simulation
 
 The compiled RTL can be simulated with command:
 
@@ -76,7 +123,7 @@ vsim -c name_of_toplevel_module -do "run -all"
 
 Simulation creates a ``` .vcd ``` file. This files contains all the simulation behaviour of design.
 
-## Viewing the VCD Waveform File
+#### Viewing the VCD Waveform File
 
 To view the waveform of the design run the command:
 
@@ -85,6 +132,7 @@ gtkwave dumfile_name.vcd
 ```
 
 This opens a waveform window. Pull the required signals in the waveform and verify the behaviour of the design.
+
 
 # Test cases
 
