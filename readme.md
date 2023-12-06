@@ -78,7 +78,7 @@ run: conv_to_machine compile simulate
 
 ```
 
-### For linus Users
+### For linux Users
 
 RTL can be compiled and simulated with the command: 
 
