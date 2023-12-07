@@ -1,5 +1,5 @@
 # vsim -c work.tb_riscv_pipelined_top -do "run -all; quit -sim; quit;" 
-# Start time: 21:20:25 on Dec 07,2023
+# Start time: 21:43:36 on Dec 07,2023
 # Loading sv_std.std
 # Loading work.tb_riscv_pipelined_top
 # Loading work.riscv_pipelined_top
@@ -24,106 +24,6 @@
 # Loading work.forwarding_unit
 # Loading work.main_decoder
 # run -all
-# PC =   x, Instr = xxxxxxxx, forward_a = x, forward_b = x, reg_write = x
-# Stall_FD = x, Stall_MW = x
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =   x, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = x
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =   0, Instr = 00000000, forward_a = 0, forward_b = 0, reg_write = 0
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: 00000000, asm: 
-# 
-# 
-# PC =   0, Instr = 00100513, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: 00100513, asm: 
-# 
-# 
-# PC =   4, Instr = 00a00613, forward_a = 0, forward_b = 1, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: 00a00613, asm: 
-# 
-# 
-# PC =   8, Instr = 300515f3, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: 300515f3, asm: 
-# 
-# 
-# PC =  12, Instr = 344616f3, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: 344616f3, asm: 
-# 
-# 
-# PC =  16, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  20, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  24, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  28, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  32, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  36, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  40, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  44, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  48, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  52, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  56, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  60, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
-# PC =  64, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
-# Stall_FD = 0, Stall_MW = 0
-# Instruction: xxxxxxxx, asm: 
-# 
-# 
 # =============== Register file is: ===============
 # x 0 = 0x00000000
 # x 1 = 0x00000000
@@ -192,5 +92,5 @@
 # mip     = 0x00000080
 # ** Note: $finish    : simulator/tb_riscv_pipelined_top.sv(103)
 #    Time: 605 ps  Iteration: 0  Instance: /tb_riscv_pipelined_top
-# End time: 21:20:26 on Dec 07,2023, Elapsed time: 0:00:01
+# End time: 21:43:36 on Dec 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0

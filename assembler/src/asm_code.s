@@ -1,4 +1,2 @@
-li x10, 1
-li x12, 10
-csrrw x11, mtvec, x10
-csrrw x13, mtvec, x12
+csrrwi x11, mtvec, 1
+csrrwi x13, mtvec, 10
