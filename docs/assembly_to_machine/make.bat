@@ -6,4 +6,5 @@ riscv64-unknown-elf-gcc -o build/main.elf build/main.o build/startup.o -T linker
 riscv64-unknown-elf-objcopy -O binary --only-section=.data* --only-section=.text* build/main.elf build/main.bin
 python3 maketxt.py build/main.bin > build/main.txt
 riscv64-unknown-elf-objdump -S -s build/main.elf > build/main.dump
-cp "build/asm_code.txt" "../../inst.mem"
+cp "build/asm_code.txt" "../../sim/machine_codes.txt"
+cp "../../sim/machine_codes.txt" "../../sim/machine_codes.mem"

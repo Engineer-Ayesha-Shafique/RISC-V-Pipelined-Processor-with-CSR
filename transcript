@@ -1,56 +1,196 @@
-# vsim -c tb_processor -do "run -all" 
-# Start time: 22:50:11 on Dec 06,2023
+# vsim -c work.tb_riscv_pipelined_top -do "run -all; quit -sim; quit;" 
+# Start time: 20:58:38 on Dec 07,2023
 # Loading sv_std.std
-# Loading work.tb_processor
-# Loading work.processor
+# Loading work.tb_riscv_pipelined_top
+# Loading work.riscv_pipelined_top
 # Loading work.pc
+# Loading work.pipeline_reg_1
+# Loading work.mux_2x1
+# Loading work.adder
 # Loading work.inst_mem
-# Loading work.imm_gen
-# Loading work.inst_dec
 # Loading work.reg_file
-# Loading work.controller
-# Loading work.alu
-# Loading work.branch_cond
+# Loading work.imm_generator
+# Loading work.branch_checker
+# Loading work.alu_decoder
+# Loading work.alu_new
+# Loading work.pipeline_reg_2
+# Loading work.lsu
 # Loading work.data_mem
-# Loading work.mux2x1
-# Loading work.mux4x1
-# Loading work.CSR_RegisterFile
+# Loading work.csr_decoder
+# Loading work.csr_regs
+# Loading work.csr_ops
+# Loading work.mux_4x1
+# Loading work.riscv_pkg
+# Loading work.forwarding_unit
+# Loading work.main_decoder
 # run -all
-# CSRRW
+# PC =   x, Instr = xxxxxxxx, forward_a = x, forward_b = x, reg_write = x
+# Stall_FD = x, Stall_MW = x
+# Instruction: xxxxxxxx, asm: 
 # 
-# x0: 00000000
-# x1: 00000000
-# x2: 00000000
-# x3: 00000000
-# x4: 00000000
-# x5: 00000000
-# x6: 00000000
-# x7: 00000000
-# x8: 00000000
-# x9: 00000000
-# x10: 00000000
-# x11: 00000000
-# x12: 00000000
-# x13: 00000000
-# x14: 00000000
-# x15: 00000000
-# x16: 00000000
-# x17: 00000000
-# x18: 00000000
-# x19: 00000000
-# x20: 00000000
-# x21: 00000000
-# x22: 00000000
-# x23: 00000000
-# x24: 00000000
-# x25: 00000000
-# x26: 00000000
-# x27: 00000000
-# x28: 00000000
-# x29: 00000000
-# x30: 00000000
-# x31: 00000000
-# ** Note: $finish    : tb_processor.sv(48)
-#    Time: 160 ps  Iteration: 0  Instance: /tb_processor
-# End time: 22:50:12 on Dec 06,2023, Elapsed time: 0:00:01
+# 
+# PC =   x, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = x
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =   0, Instr = 00000000, forward_a = 0, forward_b = 0, reg_write = 0
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: 00000000, asm: 
+# 
+# 
+# PC =   0, Instr = 00100513, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: 00100513, asm: 
+# 
+# 
+# PC =   4, Instr = 00a00613, forward_a = 0, forward_b = 1, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: 00a00613, asm: 
+# 
+# 
+# PC =   8, Instr = 300515f3, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: 300515f3, asm: 
+# 
+# 
+# PC =  12, Instr = 344616f3, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: 344616f3, asm: 
+# 
+# 
+# PC =  16, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  20, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  24, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  28, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  32, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  36, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  40, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  44, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  48, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  52, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  56, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  60, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# PC =  64, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = 1
+# Stall_FD = 0, Stall_MW = 0
+# Instruction: xxxxxxxx, asm: 
+# 
+# 
+# =============== Register file is: ===============
+# x 0 = 0x00000000
+# x 1 = 0x00000000
+# x 2 = 0x00000000
+# x 3 = 0x00000000
+# x 4 = 0x00000000
+# x 5 = 0x00000000
+# x 6 = 0x00000000
+# x 7 = 0x00000000
+# x 8 = 0x00000000
+# x 9 = 0x00000000
+# x10 = 0x00000001
+# x11 = 0x00000001
+# x12 = 0x0000000a
+# x13 = 0x00000080
+# x14 = 0x00000000
+# x15 = 0x00000000
+# x16 = 0x00000000
+# x17 = 0x00000000
+# x18 = 0x00000000
+# x19 = 0x00000000
+# x20 = 0x00000000
+# x21 = 0x00000000
+# x22 = 0x00000000
+# x23 = 0x00000000
+# x24 = 0x00000000
+# x25 = 0x00000000
+# x26 = 0x00000000
+# x27 = 0x00000000
+# x28 = 0x00000000
+# x29 = 0x00000000
+# x30 = 0x00000000
+# x31 = 0x00000000
+# 
+# 
+# =============== Data memory is: ===============
+# x 0 = 0x00000000
+# x 1 = 0x00000000
+# x 2 = 0x00000000
+# x 3 = 0x00000000
+# x 4 = 0x00000000
+# x 5 = 0x00000000
+# x 6 = 0x00000000
+# x 7 = 0x00000000
+# x 8 = 0x00000000
+# x 9 = 0x00000000
+# x10 = 0x00000000
+# x11 = 0x00000000
+# x12 = 0x00000000
+# x13 = 0x00000000
+# x14 = 0x00000000
+# x15 = 0x00000000
+# x16 = 0x00000000
+# x17 = 0x00000000
+# x18 = 0x00000000
+# x19 = 0x00000000
+# x20 = 0x00000000
+# 
+# 
+# =============== CSR memory is: ===============
+# mstatus = 0x00000001
+# mie     = 0x00000000
+# mtvec   = 0x00000000
+# mepc    = 0x00000040
+# mcause  = 0x00000002
+# mip     = 0x00000080
+# ** Note: $finish    : sim/tb_riscv_pipelined_top.sv(103)
+#    Time: 605 ps  Iteration: 0  Instance: /tb_riscv_pipelined_top
+# End time: 20:58:38 on Dec 07,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
