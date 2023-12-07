@@ -1,5 +1,5 @@
 # vsim -c work.tb_riscv_pipelined_top -do "run -all; quit -sim; quit;" 
-# Start time: 20:58:38 on Dec 07,2023
+# Start time: 21:03:08 on Dec 07,2023
 # Loading sv_std.std
 # Loading work.tb_riscv_pipelined_top
 # Loading work.riscv_pipelined_top
@@ -29,6 +29,9 @@
 # Instruction: xxxxxxxx, asm: 
 # 
 # 
+# ** Error: (vsim-7) Failed to open VCD file "docs//dump.vcd" in write mode.
+# No such file or directory. (errno = ENOENT)    : sim/tb_riscv_pipelined_top.sv(61)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_riscv_pipelined_top
 # PC =   x, Instr = xxxxxxxx, forward_a = 0, forward_b = 0, reg_write = x
 # Stall_FD = 0, Stall_MW = 0
 # Instruction: xxxxxxxx, asm: 
@@ -192,5 +195,5 @@
 # mip     = 0x00000080
 # ** Note: $finish    : sim/tb_riscv_pipelined_top.sv(103)
 #    Time: 605 ps  Iteration: 0  Instance: /tb_riscv_pipelined_top
-# End time: 20:58:38 on Dec 07,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 21:03:09 on Dec 07,2023, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

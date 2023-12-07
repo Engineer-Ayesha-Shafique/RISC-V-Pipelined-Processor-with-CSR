@@ -34,7 +34,7 @@ TB_TARGET = tb_riscv_pipelined_top
 conv_to_machine:  #converts assembly code to machine code
 
 #this make does not call this makefile but in that folder
-	cd docs/assembly_to_machine/ && $(MAKE)
+	cd assembler/assembly_to_machine/ && $(MAKE)
 
 gen_mem_file: conv_to_machine
 	cp "sim/machine_codes.txt" "sim/machine_codes.mem"
