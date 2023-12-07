@@ -26,7 +26,7 @@ RTL_FILE22 = csr_decoder
 TB_FILE1  = tb_riscv_pipelined_top
 TB_PATH   = simulator/
 RTL_PATH  = rtl/
-WAVE_PATH = docs/
+WAVE_PATH = waveform/
 WAVE_NAME = dump
 
 TB_TARGET = tb_riscv_pipelined_top
@@ -34,7 +34,7 @@ TB_TARGET = tb_riscv_pipelined_top
 conv_to_machine:  #converts assembly code to machine code
 
 #this make does not call this makefile but in that folder
-	cd assembler/assembly_to_machine/ && $(MAKE)
+	cd assembler/ && $(MAKE)
 
 gen_mem_file: conv_to_machine
 	cp "simulator/machine_codes.txt" "simulator/machine_codes.mem"
