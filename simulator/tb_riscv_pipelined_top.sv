@@ -58,7 +58,7 @@ riscv_pipelined_top #(
    end
 
    initial begin
-      $dumpfile("docs//dump.vcd");
+      $dumpfile("waveform/dump.vcd");
       $dumpvars;
    end
    initial begin

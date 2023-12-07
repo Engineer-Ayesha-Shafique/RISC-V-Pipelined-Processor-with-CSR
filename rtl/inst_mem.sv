@@ -12,7 +12,7 @@ module inst_mem #(
    logic [REG_SIZE-1:0] inst_mem [0:NO_OF_REGS-1];
 
    initial begin
-      $readmemh("sim/machine_codes.mem", inst_mem);
+      $readmemh("simulator/machine_codes.mem", inst_mem);
    end
    
    always_comb begin 
