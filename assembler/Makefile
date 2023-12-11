@@ -1,11 +1,8 @@
-.DEFAULT_GOAL := a
+.DEFAULT_GOAL := linux
 
-a:   #target to convert assembly to machine code
-	./make_a_to_m.bat
-
-a_linux:
-	# ./make_a_to_m.bat
-	chmod +x make_a_to_m.sh
-	./make_a_to_m.sh
+#target to convert assembly to machine code
+linux:
+	chmod +x make.sh
+	./make.sh
 clean:
 	del build
