@@ -1,5 +1,5 @@
 # vsim -c work.tb_riscv_pipelined_top -do "run -all; quit -sim; quit;" 
-# Start time: 21:43:36 on Dec 07,2023
+# Start time: 09:56:59 on Dec 11,2023
 # Loading sv_std.std
 # Loading work.tb_riscv_pipelined_top
 # Loading work.riscv_pipelined_top
@@ -92,5 +92,5 @@
 # mip     = 0x00000080
 # ** Note: $finish    : simulator/tb_riscv_pipelined_top.sv(103)
 #    Time: 605 ps  Iteration: 0  Instance: /tb_riscv_pipelined_top
-# End time: 21:43:36 on Dec 07,2023, Elapsed time: 0:00:00
+# End time: 09:57:03 on Dec 11,2023, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
