@@ -1,10 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////
 //
-// Copyright (c) 2022 UET Lahore (All Rights Reserved)
-//
-// Project Name: RISC-V Core
-// Module Name:  [forwarding_unit]
-// Designer:     [AHSAN ALI]
 // Description:  [The unit to solve RAW data hazards in RISC-V Core
 //                actually both forwarding and stalling unit ]
 //                

@@ -29,6 +29,7 @@ riscv_pipelined_top #(
    .e_intr  (e_intr )
 );
 
+
    initial begin
       clk_i = 0;
       forever begin
@@ -64,7 +65,7 @@ riscv_pipelined_top #(
    initial begin
       e_intr = 0;
       t_intr = 0;
-      repeat(20) @(posedge clk_i); //give interrupt after register are configured
+      repeat(15) @(posedge clk_i); //give interrupt after register are configured
       t_intr = 1; //1
       
       repeat(2) @(posedge clk_i);
@@ -73,9 +74,16 @@ riscv_pipelined_top #(
       e_intr = 0; //1
       @(posedge clk_i);
       e_intr = 0;
+      // forever begin
+      //    repeat(4) @(posedge clk_i);
+      //       t_intr = 1;
+      //    repeat(2) @(posedge clk_i);
+      //       t_intr = 0;         
+
+      // end
 
 
-      #200;
+      #300;
       //seeing the contents of register file
       $display("=============== Register file is: ===============");
       for (int i=0; i<32; i++) begin

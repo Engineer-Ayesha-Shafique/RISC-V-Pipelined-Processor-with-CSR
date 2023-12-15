@@ -105,6 +105,18 @@ module csr_regs # (
                end
             end
 
+            MIP_ADDR   : begin
+               if (csr_cntr == 3'b000 || csr_cntr == 3'b001 || csr_cntr == 3'b011 || csr_cntr == 3'b100) begin   //CSRRW | CSRRS | CSRRWI | CSRRSI
+                  mip_ff <= data_i;   //mtvec_ff
+               end
+               else if (csr_cntr == 3'b010 || csr_cntr == 3'b101) begin  //CSRRC | CSRRCI
+                  mip_ff <= ~data_i;   //because is is csr read and clear
+               end
+               else begin
+                  mip_ff <= data_i;
+               end
+            end
+
          endcase
       end
 

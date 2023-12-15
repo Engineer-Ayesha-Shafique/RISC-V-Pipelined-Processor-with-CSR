@@ -2,15 +2,88 @@
 build/asm_code.elf:     file format elf32-littleriscv
 
 Contents of section .text:
- 0000 13051000 1306a000 f3150530 f3164634  ...........0..F4
+ 0000 6f00c008 6f00c000 6f000007 6f004007  o...o...o...o.@.
+ 0010 93015000 63c40104 63820104 93002000  ..P.c...c..... .
+ 0020 63821104 33023000 33013000 93821200  c...3.0.3.0.....
+ 0030 1301f1ff b3014000 6f000001 e31a11fe  ......@.o.......
+ 0040 6f008002 33023200 b3032000 9383f3ff  o...3.2... .....
+ 0050 33023200 e39c53fe 6ff05ffe 13021000  3.2...S.o._.....
+ 0060 6f008000 13022000 93001000 1391a000  o..... .........
+ 0070 23204100 6f004001 130a4001 73002030  # A.o.@...@.s. 0
+ 0080 930aa000 73002030 6f000000 130b8000  ....s. 0o.......
+ 0090 73100b30 930b1000 139c7b00 939cbb00  s..0......{.....
+ 00a0 330d9c01 73104d30 6ff09ff6           3...s.M0o...    
 Contents of section .riscv.attributes:
  0000 411d0000 00726973 63760001 13000000  A....riscv......
  0010 05727633 32693270 30000801 0a0b      .rv32i2p0.....  
 
 Disassembly of section .text:
 
-00000000 <.text>:
-   0:	00100513          	li	a0,1
-   4:	00a00613          	li	a2,10
-   8:	300515f3          	csrrw	a1,mstatus,a0
-   c:	344616f3          	csrrw	a3,mip,a2
+00000000 <main-0x10>:
+   0:	08c0006f          	j	8c <configure>
+   4:	00c0006f          	j	10 <main>
+   8:	0700006f          	j	78 <h1>
+   c:	0740006f          	j	80 <h2>
+
+00000010 <main>:
+  10:	00500193          	li	gp,5
+  14:	0401c463          	bltz	gp,5c <negative_and_zero>
+  18:	04018263          	beqz	gp,5c <negative_and_zero>
+  1c:	00200093          	li	ra,2
+  20:	04118263          	beq	gp,ra,64 <two>
+  24:	00300233          	add	tp,zero,gp
+  28:	00300133          	add	sp,zero,gp
+  2c:	00128293          	addi	t0,t0,1
+
+00000030 <find>:
+  30:	fff10113          	addi	sp,sp,-1
+  34:	004001b3          	add	gp,zero,tp
+  38:	0100006f          	j	48 <multiply>
+
+0000003c <done>:
+  3c:	fe111ae3          	bne	sp,ra,30 <find>
+  40:	0280006f          	j	68 <stop>
+  44:	00320233          	add	tp,tp,gp
+
+00000048 <multiply>:
+  48:	002003b3          	add	t2,zero,sp
+
+0000004c <multiply1>:
+  4c:	fff38393          	addi	t2,t2,-1
+  50:	00320233          	add	tp,tp,gp
+  54:	fe539ce3          	bne	t2,t0,4c <multiply1>
+  58:	fe5ff06f          	j	3c <done>
+
+0000005c <negative_and_zero>:
+  5c:	00100213          	li	tp,1
+  60:	0080006f          	j	68 <stop>
+
+00000064 <two>:
+  64:	00200213          	li	tp,2
+
+00000068 <stop>:
+  68:	00100093          	li	ra,1
+  6c:	00a09113          	slli	sp,ra,0xa
+  70:	00412023          	sw	tp,0(sp)
+  74:	0140006f          	j	88 <exit>
+
+00000078 <h1>:
+  78:	01400a13          	li	s4,20
+  7c:	30200073          	mret
+
+00000080 <h2>:
+  80:	00a00a93          	li	s5,10
+  84:	30200073          	mret
+
+00000088 <exit>:
+  88:	0000006f          	j	88 <exit>
+
+0000008c <configure>:
+  8c:	00800b13          	li	s6,8
+  90:	300b1073          	csrw	mstatus,s6
+  94:	00100b93          	li	s7,1
+  98:	007b9c13          	slli	s8,s7,0x7
+  9c:	00bb9c93          	slli	s9,s7,0xb
+  a0:	019c0d33          	add	s10,s8,s9
+  a4:	304d1073          	csrw	mie,s10
+  a8:	f69ff06f          	j	10 <main>
