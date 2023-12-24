@@ -3,7 +3,7 @@ _________________
 
 # RISC-V Pipelined Processor RV32I core with CSR
 
-This is a Pipelined Processor with CSR support running the RV32I implementation, hence a 32-bit CPU, written in __SystemVerilog__. It was made for learning purposes, it's not intended for production under the supervision of our respected Mentor [ @hamza-akhtar-dev ](https://github.com/hamza-akhtar-dev). Developed and Tested on [ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition).
+This is a 3-Stage Pipelined Processor with CSR support running the RV32I implementation, hence a 32-bit CPU, written in __SystemVerilog__. It was made for learning purposes, it's not intended for production under the supervision of our respected Mentor [ @hamza-akhtar-dev ](https://github.com/hamza-akhtar-dev). Developed and Tested on [ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition).
 
 ## RISC-V reference
 
