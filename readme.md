@@ -15,6 +15,8 @@ The architecture was heavily inspired by the 32-bit [Single Cycle MIPS processor
 
 ![](Risc_V_Pipelined.drawio.png)
 
+
+
 ### Documentation
 The documentation consists of three documents:
 1. User-Level ISA Specification <br/>
